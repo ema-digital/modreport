@@ -1,0 +1,19 @@
+{
+  "name": "modreport",
+  "version": "0.1.0",
+  "description": "Returns an object of files modified",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "fs"
+  ],
+  "author": "Ethan Gardner",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.10.6",
+    "recursive-readdir": "^1.2.1",
+    "upath": "^0.1.6"
+  }
+}
