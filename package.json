@@ -1,19 +1,45 @@
 {
   "name": "modreport",
   "version": "0.1.0",
-  "description": "Returns an object of files modified",
+  "description": "Returns a list of modified files based on a date passed as a command line option",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha -u bdd -R spec -t 500 --recursive"
   },
   "keywords": [
     "fs"
   ],
-  "author": "Ethan Gardner",
+  "license": "MIT",
+  "author": "Eric Mower and Associates",
+  "contributors": [
+    {
+      "name": "Ethan Gardner"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.8.1",
     "moment": "^2.10.6",
     "recursive-readdir": "^1.2.1",
     "upath": "^0.1.6"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ema-digital/modreport/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ema-digital/modreport.git"
+  },
+  "bin": {
+    "modreport": "index.js"
   }
 }
