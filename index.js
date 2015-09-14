@@ -23,9 +23,10 @@ var modsince = function(err, ms) {
             }
             if (stats.isFile()) {
               var mod_time = new Date(stats.mtime).getTime();
-            
+              
               if (moment(mod_time).isAfter(compare_time) ) {
                 var file = path.normalize(element);
+                
                 file = file.replace(path.normalize(process.cwd()), '.');
                 console.log(file);
               }
