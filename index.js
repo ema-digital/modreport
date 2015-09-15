@@ -5,14 +5,14 @@ var commandopts = require('./lib/command').command(process.argv),
   path = require('upath'),
   moment = require('moment');
 
-var modsince = function(err, ms) { 
+var modreport = function(err, ms) { 
   recursive(process.cwd(), ['node_modules', '.git', '.sass-cache', '.svn', '.bak'], function (err, files) {
     if (err) {
       console.log(err);
     }
     else {
       if (moment(commandopts.start).isValid()) {
-      
+        
         var compare_time = moment().format(commandopts.start);
         
         files.forEach(function(element, index, array) {
@@ -44,8 +44,8 @@ var modsince = function(err, ms) {
 };
 
 if (require.main === module) {
-  modsince();
+  modreport();
 }
 else {
-  exports.modsince = modsince;
+  exports.modreport = modreport;
 }
